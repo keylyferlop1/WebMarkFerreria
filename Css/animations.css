@@ -1,0 +1,46 @@
+/* ============================================================
+   ANIMATIONS — Clases de revelado y animaciones de scroll
+   GSAP gestiona las animaciones en JS, aquí van los estados base
+   ============================================================ */
+
+/* Estado inicial (oculto) para elementos que serán animados por GSAP */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* Una vez animados, GSAP aplica inline styles.
+   Este estado 'is-revealed' se usa como fallback */
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Delay por tarjeta usando variable CSS --i */
+.cat-card,
+.feat-item,
+.testimonial {
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+/* Líneas separadoras decorativas */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--clr-border), transparent);
+  margin-block: var(--sp-16);
+}
+
+/* Pulso suave para badge */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--clr-accent-glow); }
+  50%       { box-shadow: 0 0 0 8px oklch(72% 0.19 52 / 0); }
+}
+
+.about__badge {
+  animation: badgePulse 3s ease-in-out infinite;
+}

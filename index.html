@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ferrocon — Donde las ideas encuentran su material. Herramientas, materiales y asesoría para proyectos que duran." />
+  <meta name="theme-color" content="#1a1a2e" />
+  <title>Ferrocon — Ferretería Especializada</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Css/reset.css" />
+  <link rel="stylesheet" href="Css/tokens.css" />
+  <link rel="stylesheet" href="Css/base.css" />
+  <link rel="stylesheet" href="Css/cursor.css" />
+  <link rel="stylesheet" href="Css/layout.css" />
+  <link rel="stylesheet" href="Css/nav.css" />
+  <link rel="stylesheet" href="Css/hero.css" />
+  <link rel="stylesheet" href="Css/sections.css" />
+  <link rel="stylesheet" href="Css/components.css" />
+  <link rel="stylesheet" href="Css/animations.css" />
+  <link rel="stylesheet" href="Css/support.css" />
+
+  <script src="js/support.js"></script>
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="nav__logo" aria-label="Ferrocon — Inicio">
+        <span class="nav__logo-mark" aria-hidden="true">⬡</span>
+        <span class="nav__logo-text">FERROCON</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle"
+              aria-expanded="false" aria-controls="nav-menu"
+              aria-label="Abrir menú de navegación">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#nosotros"   class="nav__link">Nosotros</a></li>
+        <li><a href="#categorias" class="nav__link">Catálogo</a></li>
+        <li><a href="#ventajas"   class="nav__link">¿Por qué Ferrocon?</a></li>
+        <li><a href="#contacto"   class="nav__link nav__link--cta">Cotizar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero" aria-label="Bienvenida">
+      <div class="hero__bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow reveal-up">Ferretería Especializada · Est. 2001</p>
+        <h1 class="hero__title reveal-up">
+          Cada proyecto<br/>que imaginas
+          <em class="hero__title-accent"><br/>ya tiene su material aquí</em>
+        </h1>
+        <p class="hero__subtitle reveal-up">
+          No vendemos herramientas. Entregamos la diferencia entre lo que quieres construir
+          y lo que <strong>terminas construyendo.</strong>
+        </p>
+        <div class="hero__actions reveal-up">
+          <a href="#categorias" class="btn btn--primary">Explorar catálogo</a>
+          <a href="#contacto"   class="btn btn--ghost">Hablar con un experto</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Descubrir</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="nosotros" class="section section--about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <span class="label reveal-up">Nuestra filosofía</span>
+            <h2 id="about-heading" class="section__title reveal-up">
+              Una ferretería no es un depósito.<br/>Es donde los planos cobran forma.
+            </h2>
+            <p class="body-text reveal-up">
+              Llevamos más de dos décadas viendo cómo personas ordinarias construyen cosas
+              extraordinarias. Aprendimos que lo que marca la diferencia no es el precio del
+              martillo, sino saber exactamente cuál necesitas y por qué.
+            </p>
+            <p class="body-text reveal-up">
+              Por eso en Ferrocon nunca verás a alguien señalarte el pasillo 7 y darte la espalda.
+              Aquí siempre te preguntan: <em>«¿qué estás construyendo?»</em>
+            </p>
+            <div class="stats-row reveal-up">
+              <div class="stat">
+                <span class="stat__number" data-count="24">0</span><span class="stat__unit">+</span>
+                <span class="stat__label">Años en el oficio</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="8500">0</span><span class="stat__unit">+</span>
+                <span class="stat__label">Productos disponibles</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="12000">0</span><span class="stat__unit">+</span>
+                <span class="stat__label">Proyectos completados</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__visual reveal-right">
+            <div class="about__frame">
+              <div class="about__img-placeholder" aria-label="Interior de Ferrocon"></div>
+              <div class="about__badge" aria-hidden="true">
+                <span>Expertos<br/>en materiales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categorias" class="section section--categories" aria-labelledby="cat-heading">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="label">Catálogo</span>
+          <h2 id="cat-heading" class="section__title">
+            Todo lo que necesitas.<br/>En un solo lugar.
+          </h2>
+          <p class="section__subtitle">Si existe, lo tenemos. Si no, lo conseguimos.</p>
+        </header>
+        <ul class="cat-grid" role="list">
+          <li class="cat-card reveal-up" style="--i:0">
+            <span class="cat-card__icon" aria-hidden="true">🔩</span>
+            <h3 class="cat-card__title">Tornillería y Fijaciones</h3>
+            <p class="cat-card__desc">Desde el tornillo M3 hasta anclajes industriales. Todo calibrado, todo clasificado.</p>
+            <span class="cat-card__sku">+1,200 SKUs</span>
+          </li>
+          <li class="cat-card reveal-up" style="--i:1">
+            <span class="cat-card__icon" aria-hidden="true">🔧</span>
+            <h3 class="cat-card__title">Herramienta Manual</h3>
+            <p class="cat-card__desc">La herramienta correcta no cansa. La incorrecta sí. Aquí encontrarás la diferencia.</p>
+            <span class="cat-card__sku">+850 SKUs</span>
+          </li>
+          <li class="cat-card reveal-up" style="--i:2">
+            <span class="cat-card__icon" aria-hidden="true">⚡</span>
+            <h3 class="cat-card__title">Herramienta Eléctrica</h3>
+            <p class="cat-card__desc">Potencia cuando la necesitas. Marcas que no fallan cuando más importa.</p>
+            <span class="cat-card__sku">+400 SKUs</span>
+          </li>
+          <li class="cat-card reveal-up" style="--i:3">
+            <span class="cat-card__icon" aria-hidden="true">🧱</span>
+            <h3 class="cat-card__title">Construcción</h3>
+            <p class="cat-card__desc">Cemento, varilla, block, tabique. Los cimientos de todo lo que construyes.</p>
+            <span class="cat-card__sku">+600 SKUs</span>
+          </li>
+          <li class="cat-card reveal-up" style="--i:4">
+            <span class="cat-card__icon" aria-hidden="true">💧</span>
+            <h3 class="cat-card__title">Plomería</h3>
+            <p class="cat-card__desc">El agua siempre encuentra su camino. Nosotros te ayudamos a dirigirla.</p>
+            <span class="cat-card__sku">+700 SKUs</span>
+          </li>
+          <li class="cat-card reveal-up" style="--i:5">
+            <span class="cat-card__icon" aria-hidden="true">🎨</span>
+            <h3 class="cat-card__title">Pinturas y Acabados</h3>
+            <p class="cat-card__desc">El acabado es la primera impresión de lo que construiste. Que sea memorable.</p>
+            <span class="cat-card__sku">+320 SKUs</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURES / WHY FORJA -->
+    <section id="ventajas" class="section section--features" aria-labelledby="feat-heading">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="label">¿Por qué Ferrocon?</span>
+          <h2 id="feat-heading" class="section__title">
+            No somos la opción más fácil.<br/>Somos la correcta.
+          </h2>
+        </header>
+        <div class="feat-grid">
+          <article class="feat-item reveal-up" style="--i:0">
+            <span class="feat-item__num" aria-hidden="true">01</span>
+            <h3 class="feat-item__title">Personal que conoce la diferencia entre un M6 y un M8</h3>
+            <p class="feat-item__desc">Y más importante: sabe por qué importa para tu proyecto. Nadie trabaja aquí sin haber trabajado con las manos.</p>
+          </article>
+          <article class="feat-item reveal-up" style="--i:1">
+            <span class="feat-item__num" aria-hidden="true">02</span>
+            <h3 class="feat-item__title">Precios que no te hacen calcular dos veces</h3>
+            <p class="feat-item__desc">Sin letra chica, sin precios que cambian en caja. Lo que ves es lo que pagas. Siempre.</p>
+          </article>
+          <article class="feat-item reveal-up" style="--i:2">
+            <span class="feat-item__num" aria-hidden="true">03</span>
+            <h3 class="feat-item__title">Inventario que respeta tu tiempo</h3>
+            <p class="feat-item__desc">Nos duele más que a ti cuando algo no está. Por eso tenemos pedidos garantizados en 24 horas.</p>
+          </article>
+          <article class="feat-item reveal-up" style="--i:3">
+            <span class="feat-item__num" aria-hidden="true">04</span>
+            <h3 class="feat-item__title">Entrega en obra, no en la acera</h3>
+            <p class="feat-item__desc">Coordinamos la entrega donde realmente la necesitas, cuando realmente la necesitas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--testimonials" aria-labelledby="test-heading">
+      <div class="container">
+        <header class="section__header reveal-up">
+          <span class="label">Lo que dicen quienes construyen</span>
+          <h2 id="test-heading" class="section__title">
+            Las palabras de quienes<br/>ya terminaron sus proyectos.
+          </h2>
+        </header>
+        <div class="test-grid">
+          <blockquote class="testimonial reveal-up" style="--i:0">
+            <p class="testimonial__text">«Llevaba semanas buscando un perfil de aluminio específico. En Forja no solo lo tenían: me explicaron tres formas de usarlo que yo no había considerado.»</p>
+            <footer class="testimonial__meta">
+              <cite class="testimonial__name">Ing. Roberto Salinas</cite>
+              <span class="testimonial__role">Contratista independiente</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal-up" style="--i:1">
+            <p class="testimonial__text">«Primera vez que salgo de una ferretería sabiendo más de lo que entré. Sin que nadie me hiciera sentir que estaba haciendo preguntas tontas.»</p>
+            <footer class="testimonial__meta">
+              <cite class="testimonial__name">Mariana Orozco</cite>
+              <span class="testimonial__role">Diseñadora de interiores</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal-up" style="--i:2">
+            <p class="testimonial__text">«Soy cliente desde hace 11 años. Lo que me mantiene aquí no es el precio: es que nunca me han vendido algo que no necesitaba.»</p>
+            <footer class="testimonial__meta">
+              <cite class="testimonial__name">Don Aurelio Méndez</cite>
+              <span class="testimonial__role">Constructor, 30 años de experiencia</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section id="contacto" class="section section--cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta__wrap reveal-up">
+          <span class="label">Empieza hoy</span>
+          <h2 id="cta-heading" class="cta__title">
+            Tu próximo proyecto está esperando<br/>el material correcto.
+          </h2>
+          <p class="cta__sub">Cuéntanos qué vas a construir. Nosotros nos encargamos del resto.</p>
+          <form class="cta__form" id="contact-form" aria-label="Formulario de cotización" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-name" class="form-label">Nombre</label>
+                <input type="text"  id="f-name"    name="name"    class="form-input" placeholder="Tu nombre"        required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="f-email" class="form-label">Correo</label>
+                <input type="email" id="f-email"   name="email"   class="form-input" placeholder="tu@correo.com"    required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="f-project" class="form-label">¿Qué estás construyendo?</label>
+              <textarea id="f-project" name="project" class="form-input form-textarea"
+                        placeholder="Cuéntanos sobre tu proyecto..." rows="4" required></textarea>
+            </div>
+            <div class="form-field form-field--full form-field--submit">
+              <div class="form-submit-group">
+                <button type="submit" class="btn btn--primary btn--large btn--pulse" id="submit-btn">
+                  <span>Solicitar cotización</span>
+                  <span class="btn__arrow" aria-hidden="true">→</span>
+                </button>
+                <div class="form-trust-badges">
+                  <span class="trust-badge"><span aria-hidden="true">⏱️</span> Respuesta rápida</span>
+                  <span class="trust-badge"><span aria-hidden="true">🔒</span> 100% seguro</span>
+                  <span class="trust-badge"><span aria-hidden="true">✅</span> Sin compromiso</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#inicio" class="nav__logo" aria-label="Ferrocon — Inicio">
+            <span class="nav__logo-mark" aria-hidden="true">⬡</span>
+            <span class="nav__logo-text">FERROCON</span>
+          </a>
+          <p class="footer__tagline">Donde las ideas encuentran su material.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Pie de página">
+          <h3 class="footer__nav-title">Explorar</h3>
+          <ul role="list">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#categorias">Catálogo</a></li>
+            <li><a href="#ventajas">¿Por qué Ferrocon?</a></li>
+            <li><a href="#contacto">Cotizar</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h3 class="footer__nav-title">Contáctanos</h3>
+          <address>
+            <p><a href="tel:+50512345678">+505 1234 5678</a></p>
+            <p><a href="mailto:ferreteria@Ferrocon.com">ferreteria@Ferrocon.com</a></p>
+            <p>Av. Industrias Ferreteras, Col. Centro<br/>Ciudad de Managua, Nicaragua</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="footer-year">2026</span>  Ferretería Ferrocon. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- JS modules -->
+  <script src="js/cursor.js"     defer></script>
+  <script src="js/parallax.js"   defer></script>
+  <script src="js/nav.js"        defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js"       defer></script>
+</body>
+</html>

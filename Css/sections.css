@@ -1,0 +1,118 @@
+/* ============================================================
+   SECTIONS — Estilos específicos por sección
+   ============================================================ */
+
+/* === ABOUT === */
+.section--about {
+  background: var(--clr-bg);
+  overflow: hidden;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+  .about__visual {
+    max-width: 480px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* === CATEGORIES === */
+.section--categories {
+  background: var(--clr-bg-alt);
+  position: relative;
+}
+
+.section--categories::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    oklch(72% 0.19 52 / 0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* === FEATURES === */
+.section--features {
+  background: var(--clr-bg);
+  position: relative;
+}
+
+.section--features::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--clr-border), transparent);
+}
+
+/* === TESTIMONIALS === */
+.section--testimonials {
+  background: var(--clr-bg-alt);
+}
+
+/* === CTA === */
+.section--cta {
+  background: var(--clr-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.section--cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    oklch(72% 0.19 52 / 0.06) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.cta__wrap {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--clr-text);
+  margin-bottom: var(--sp-4);
+}
+
+.cta__sub {
+  font-size: var(--text-lg);
+  color: var(--clr-text-muted);
+  margin-bottom: var(--sp-10);
+  max-width: 52ch;
+  margin-inline: auto;
+  margin-bottom: var(--sp-10);
+}
+
+.cta__form {
+  text-align: left;
+}
