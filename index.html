@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY2MTSLMLH"></script>
@@ -12,7 +13,7 @@
 </script>
 
   <!-- Mailchimp -->
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dd76f5222886f46ec70e9a627/7f0e1238ddaae219f0c565477.js");</script>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dd76f5222886f46ec70e9a627/7f0e1238ddaae219f0c565477.js");</script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -150,16 +151,15 @@
           </div>
 
           <!-- Reemplaza "TU_ID_DE_FORMSPREE" con el ID real de tu cuenta gratuita de Formspree -->
-      <form class="cta__form"
+     <form class="cta__form"
       id="lead-form"
-      name="registro-ferrocon"
+      action="https://app.us10.list-manage.com/subscribe/post"
       method="POST"
-      data-netlify="true"
-      netlify
-      aria-label="Formulario de registro"
-      novalidate>
+      target="_blank">
 
-  <input type="hidden" name="form-name" value="registro-ferrocon">
+  <!-- Mailchimp -->
+  <input type="hidden" name="u" value="dd76f5222886f46ec70e9a627">
+  <input type="hidden" name="id" value="4ff841e9a7">
 
   <div id="form-success" class="form-success hidden">
     <span class="form-success__icon">🎉</span>
@@ -168,86 +168,135 @@
       Revisa tu correo en los próximos minutos para descargar tu guía y reclamar el 10% de descuento.
     </p>
   </div>
-            <div class="form-content" id="form-content">
-              <div class="form-row">
-                <div class="form-field form-field--floating">
-                  <span class="input-icon">👤</span>
-                  <input type="text" id="f-name" name="MERGE1" class="form-input has-icon" placeholder=" " required autocomplete="name" />
-                  <label for="f-name" class="form-label label-with-icon">Nombre</label>
-                  <span class="form-error-msg">Por favor, ingresa tu nombre.</span>
-                </div>
-                <div class="form-field form-field--floating">
-    <span class="input-icon">👥</span>
-    <input type="text"
-              id="f-lastname"
-              name="MERGE2"
-              class="form-input has-icon"
-              placeholder=" "
-              autocomplete="family-name" />
-    <label for="f-lastname" class="form-label label-with-icon">
-      Apellidos
-    </label>
-  </div>
+
+  <div class="form-content" id="form-content">
+
+    <!-- Nombre y Apellidos -->
+    <div class="form-row">
+
+      <div class="form-field form-field--floating">
+        <span class="input-icon">👤</span>
+        <input
+          type="text"
+          id="f-name"
+          name="FNAME"
+          class="form-input has-icon"
+          placeholder=" "
+          required
+          autocomplete="given-name" />
+        <label for="f-name" class="form-label label-with-icon">
+          Nombre
+        </label>
+        <span class="form-error-msg">
+          Por favor, ingresa tu nombre.
+        </span>
+      </div>
+
+      <div class="form-field form-field--floating">
+        <span class="input-icon">👥</span>
+        <input
+          type="text"
+          id="f-lastname"
+          name="LNAME"
+          class="form-input has-icon"
+          placeholder=" "
+          required
+          autocomplete="family-name" />
+        <label for="f-lastname" class="form-label label-with-icon">
+          Apellidos
+        </label>
+      </div>
+
+    </div>
+
+    <!-- Correo -->
+    <div class="form-row">
+
+      <div class="form-field form-field--floating form-field--full">
+        <span class="input-icon">✉️</span>
+        <input
+          type="email"
+          id="f-email"
+          name="EMAIL"
+          class="form-input has-icon"
+          placeholder=" "
+          required
+          autocomplete="email" />
+        <label for="f-email" class="form-label label-with-icon">
+          Tu correo electrónico
+        </label>
+        <span class="form-error-msg">
+          Ingresa un correo válido.
+        </span>
+      </div>
+
+    </div>
+
+    <div class="form-field form-field--floating">
+  <span class="input-icon">🎂</span>
+  <input
+    type="number"
+    id="f-age"
+    name="EDAD"
+    class="form-input has-icon"
+    min="18"
+    max="80"
+    required />
+  <label for="f-age" class="form-label label-with-icon">
+    Edad
+  </label>
 </div>
-                <div class="form-field form-field--floating">
-                  <span class="input-icon">✉️</span>
-                  <input type="email" id="f-email" name="MERGE0" class="form-input has-icon" placeholder=" " required autocomplete="email" />
-                  <label for="f-email" class="form-label label-with-icon">Tu correo electrónico</label>
-                  <span class="form-error-msg">Ingresa un correo válido.</span>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-field form-field--floating">
-                  <span class="input-icon">🎂</span>
-                  <input type="number" id="f-age" name="age" class="form-input has-icon" placeholder=" " required min="18" max="100" />
-                  <label for="f-age" class="form-label label-with-icon">Edad</label>
-                </div>
-                <div class="form-field form-field--floating">
-                  <span class="input-icon">📱</span>
-                  <input type="tel" id="f-phone" name="PHONE" class="form-input has-icon" placeholder=" " autocomplete="tel" />
-                  <label for="f-phone" class="form-label label-with-icon">Numero de Teléfono</label>
-                </div>
-              </div>
-              <!-- <div class="form-field form-field--full">
-                <label class="form-label">¿Qué áreas te interesan? (Selecciona una o varias)</label>
-                <div class="interests-grid">
-                  <label class="interest-tag">
-                    <input type="checkbox" name="interests" value="herramienta-manual" class="interest-tag__input">
-                    <span class="interest-tag__label">🔧 Herramienta Manual</span>
-                  </label>
-                  <label class="interest-tag">
-                    <input type="checkbox" name="interests" value="herramienta-electrica" class="interest-tag__input">
-                    <span class="interest-tag__label">⚡ Herramienta Eléctrica</span>
-                  </label>
-                  <label class="interest-tag">
-                    <input type="checkbox" name="interests" value="construccion" class="interest-tag__input">
-                    <span class="interest-tag__label">🧱 Construcción</span>
-                  </label>
-                  <label class="interest-tag">
-                    <input type="checkbox" name="interests" value="plomeria" class="interest-tag__input">
-                    <span class="interest-tag__label">💧 Plomería</span>
-                  </label>
-                  <label class="interest-tag">
-                    <input type="checkbox" name="interests" value="pinturas" class="interest-tag__input">
-                    <span class="interest-tag__label">🎨 Pinturas y Acabados</span>
-                  </label>
-                </div>
-              </div>
-            -->
-              <div class="form-field form-field--full form-field--submit">
-                <div class="form-submit-group">
-                  <button type="submit" class="btn btn--primary btn--large btn--pulse" id="submit-btn">
-                    <span>Obtener descuento</span>
-                    <span class="btn__arrow" aria-hidden="true">→</span>
-                  </button>
-                  <div class="form-trust-badges">
-                    <span class="trust-badge"><span aria-hidden="true">🔒</span> Tus datos están seguros</span>
-                    <span class="trust-badge"><span aria-hidden="true">📩</span> Cero spam</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+
+      <div class="form-field form-field--floating">
+        <span class="input-icon">📱</span>
+        <input
+          type="tel"
+          id="f-phone"
+          name="PHONE"
+          class="form-input has-icon"
+          placeholder=" "
+          autocomplete="tel" />
+        <label for="f-phone" class="form-label label-with-icon">
+          Número de teléfono
+        </label>
+      </div>
+
+    </div>
+
+    <!-- Botón -->
+    <div class="form-field form-field--full form-field--submit">
+
+      <div class="form-submit-group">
+
+        <button
+          type="submit"
+          class="btn btn--primary btn--large btn--pulse"
+          id="submit-btn">
+
+          <span>Obtener descuento</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+
+        </button>
+
+        <div class="form-trust-badges">
+          <span class="trust-badge">
+            <span aria-hidden="true">🔒</span>
+            Tus datos están seguros
+          </span>
+
+          <span class="trust-badge">
+            <span aria-hidden="true">📩</span>
+            Cero spam
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</form>
         </div>
       </div>
     </section>
