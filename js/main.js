@@ -127,21 +127,12 @@
       btn.style.opacity = '0.7';
       btn.style.pointerEvents = 'none';
 
-      const formData = new FormData(form);
-      const actionUrl = form.getAttribute('action');
+  const formData = new FormData(form);
 
-      // Si el formulario tiene un action real (ej. Formspree), hacemos la petición.
-      // Si tiene el texto de reemplazo, simulamos la espera para probar el diseño localmente.
-      const isDummyUrl = !actionUrl || actionUrl.includes('TU_ID_DE_FORMSPREE') || !actionUrl.startsWith('http');
-
-      const submitRequest = !isDummyUrl
-        ? fetch(actionUrl, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          })
-        : new Promise(resolve => setTimeout(() => resolve({ok: true}), 1200));
-
+// Prueba local (Live Server)
+const submitRequest = Promise.resolve({
+  ok: true
+});
       submitRequest
         .then(response => {
           if (response && !response.ok) throw new Error('Error al enviar el formulario');
@@ -158,7 +149,7 @@
           if (typeof gtag === 'function') {
             gtag('event', 'generate_lead', {
               'form_name': 'Captación Ferretería',
-              'lead_type': 'Descuento_15'
+              'lead_type': 'Descuento_10%',
             });
           }
           
